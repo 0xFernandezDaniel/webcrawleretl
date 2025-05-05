@@ -15,16 +15,16 @@ Components
 1. API Endpoints
 Two main API endpoints are used to gather product information:
 
-a. Cost Changes API
+a. Cost Changes Endpoint
 
-Endpoint: https://api.doitbestdataxchange.com/cost/itemcostchanges
 Method: GET
 Description: This endpoint provides the cost changes for products. The system checks for changes in the product cost since the last time the system was run. It returns the SKU, cost details, and other pricing-related information.
 Parameters:
 memberNumber: Unique identifier for the member requesting the data.
 changesSince: The date since when the cost changes are requested.
 Response: A list of product items with details like SKU, current cost, suggested retail price, and more.
-b. Stock Level API
+
+b. Stock Level Endpoint
 
 Endpoint: https://api.doitbestdataxchange.com/InventoryBySKU/inventory?sku=
 Method: GET
@@ -32,6 +32,7 @@ Description: This API provides information about the stock levels of products ba
 Parameters:
 sku: The SKU of the product to retrieve stock levels.
 Response: Stock information, including the available quantity of the product.
+
 2. Web Scraping for Product Details
 For each product that has experienced a price change, the system scrapes additional details directly from the supplier’s website:
 
