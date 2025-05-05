@@ -15,18 +15,17 @@ How It Works
 1. API Endpoints
 The system uses two key API endpoints to gather product information:
 
-a. Cost Changes API
+a. Cost Changes Endpoint
 
-Endpoint: https://api.doitbestdataxchange.com/cost/itemcostchanges
 Method: GET
 What It Does: This endpoint returns information about price changes for products. It compares the current price with the last known price and provides details like SKU, current cost, and retail price.
 Parameters:
 memberNumber: The unique identifier for the requester.
 changesSince: The date from which cost changes are needed.
 Response: A list of products with details like SKU, the updated cost, and suggested retail prices.
-b. Stock Level API
 
-Endpoint: https://api.doitbestdataxchange.com/InventoryBySKU/inventory?sku=
+b. Stock Level Endpoint
+
 Method: GET
 What It Does: This API gives the stock level of a product based on its SKU. This helps to provide a complete picture when a price drop occurs, including how many units are left in stock.
 Parameters:
@@ -36,7 +35,7 @@ Response: Information about the product’s stock, such as the available quantit
 Whenever a product experiences a price drop, the system grabs extra details directly from the supplier’s website. The data collected includes:
 
 Product Name
-UPC (Universal Product Code)
+UPC
 Brand
 Category
 Model Number
@@ -61,9 +60,13 @@ The message is formatted nicely with embedded content, making it easy to read an
 How It Works
 
 Initialization: The system starts by loading sensitive data like API keys and webhook URLs from the .env file.
+
 Check for Price Changes: The system checks for product price changes by querying the Cost Changes API.
+
 Scrape Product Details: For each product that has a price change, the system scrapes additional details like name, UPC, brand, and stock info from the supplier’s website.
+
 Check Stock Levels: The system retrieves the current stock level for each product using the Stock Level API.
+
 Send Discord Notification: If a price drop is detected, the system sends a notification to the Discord channel, including all relevant product information.
 
 
