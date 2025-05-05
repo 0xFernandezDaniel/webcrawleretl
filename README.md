@@ -12,5 +12,4 @@ This script monitors item cost changes from a MRO distributors API and sends pri
 
 This is what the webhook notification looks like in Discord:
 
-![Webhook Preview](<img width="573" alt="Screenshot 2025-05-05 at 5 21 06 PM" src="https://github.com/user-attachments/assets/fe3fff08-41f3-44bb-9650-125978ebb853" />
-)
+![Webhook Preview]([https://user-images.githubusercontent.com/.../filename.png](https://github.com/0xFernandezDaniel/webcrawleretl/issues/1#issue-3040866073))
