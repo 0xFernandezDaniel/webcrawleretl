@@ -8,8 +8,11 @@ This script monitors item cost changes from a MRO distributors API and sends pri
 - Sends formatted Discord alerts with product info
 - Caches results to avoid duplicate alerts
 
+
 ## 📸 Webhook Preview
 
 This is what the webhook notification looks like in Discord:
 
-![Webhook Preview]([https://user-images.githubusercontent.com/.../filename.png](https://github.com/0xFernandezDaniel/webcrawleretl/issues/1#issue-3040866073))
+![Webhook Preview]([(https://github.com/0xFernandezDaniel/webcrawleretl/issues/1#issue-3040866073))
+
+
